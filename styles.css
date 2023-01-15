@@ -1,0 +1,216 @@
+* {
+    box-sizing: border-box;
+}
+
+body,
+html {
+    font-family: "Lucida Console", "Courier New", monospace;
+    color: #332131;
+    padding: 0;
+    margin: 0;
+    min-height: 100vh;
+    background-color: #fbb6b6;
+}
+
+/* If the name of the section starts with a .  (.example) its a class and any element with (class="example") in the html will be affected */
+/* if it starts with # (#example) it refers to an html id so all html elements with (id="example") will be affected*/
+/* if it has nothing at the start it refers to any html element with that name so div refers to <div> */
+/* this is how css interacts with the html */
+
+/* vw = view width, vh = view height, calculated by size of the window, not affected by how big its parent element is (0-100) (u can go above if u want)*/
+/* % speaks for itself lol, affected by how big its parent is, if the parent is 50vw and u do 50% on its child it'll be 25vw */
+
+/* padding = spacing within the element */
+/* margin = spacing outside the element */
+
+/* general guidelines: (not rules) */
+/* px:          width, height, font-size, padding, margin  */
+/* %, vw,vh:    widht, height */
+
+/* when u get comfortable with css look into flexboxes and grids they make me coom (complicated tho) */
+.layout {
+    display: grid;
+    grid-template-columns: 20vw auto;
+    grid-template-rows: auto;
+    grid-template-areas: "sidebar content";
+}
+
+.maingallery header {
+    margin:2% 0% 0% 8%;
+    padding:5px 0 0 0;
+    width:100%;
+    font-size: 28px
+  }
+
+
+.sidebar>img {
+    width: 150px;
+}
+
+.sidebar {
+    grid-area: sidebar;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+
+    overflow: auto;
+    width: 100%;
+    text-align: center;
+    padding-top: 6%;
+    font-size: 24px;
+    min-height: 100vh;
+    background-color: white
+}
+
+.sidebarhidden {
+    grid-area: sidebar;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    overflow: auto;
+    width: 100%;
+    text-align: center;
+    padding-top: 6%;
+    font-size: 24px;
+    min-height: 100vh;
+    background-color: white
+}
+
+
+.title {
+    /* this is for the title on the navbar if u wanna fuck around with that */
+}
+
+/* using > means all h3 elements inside of the class title, if i did (.title > *) i'd be all elements in the title class element */
+.title>h3 {
+    margin: 0;
+    padding-bottom: 5%;
+}
+
+a {
+    color: currentColor;
+    text-decoration: none;
+
+}
+
+.button:hover {
+    color: currentColor;
+    background-color: #f3fcf9
+}
+
+.namebutton:hover {
+    color: currentColor;
+    font-size: 31px;
+}
+
+.button {
+    font-size: 20px;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    padding-left: 100%;
+    padding-right: 100%;
+}
+
+.namebutton {
+    font-size: 30px;
+    padding-top: 5%;
+    margin-block-start: 5%;
+    padding-bottom: 2%;
+}
+
+hr {
+    width: 50%;
+    color: currentColor;
+}
+
+.hi {
+    font-size: 11px;
+    position: absolute;
+    text-align: center;
+    width: 20vw;
+    bottom: 1px
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+
+    padding: 10px;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    justify-content: center;
+
+    gap: 10px;
+}
+
+.maingallery {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    justify-content: center;
+
+    gap: 10px;
+}
+
+.galleryItem {
+    width: 480px;
+    height: 480px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 0;
+    margin: 0;
+
+    overflow: hidden;
+}
+
+.galleryItem img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    filter: blur(0);
+    transition: 400ms all ease-in-out;
+}
+
+.gallery .galleryItem:hover>img {
+    opacity: 0.7;
+    filter: blur(2px)
+}
+
+
+.galleryItem .galleryItemTitle {
+    position: absolute;
+    z-index: 10;
+
+
+    font-size: 24px;
+    font-weight: 900;
+
+    opacity: 0%;
+    transition: opacity 400ms ease-in-out;
+
+    color: #332131;
+    background-color: white;
+    padding: 7px;
+    border-radius: 6px;
+}
+
+.gallery .galleryItem:hover>.galleryItemTitle {
+    opacity: 100%;
+
+}
+
+
+.maingallery .galleryItem>img:hover{
+    transform: scale(1.1);
+
+}
