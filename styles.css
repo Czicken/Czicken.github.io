@@ -62,9 +62,9 @@ html {
     background-color: white
 }
 
-.title {
+/* .title {
     /* this is for the title on the navbar if u wanna fuck around with that */
-}
+/*}
 
 /* using > means all h3 elements inside of the class title, if i did (.title > *) i'd be all elements in the title class element */
 .title>h3 {
@@ -123,7 +123,10 @@ hr {
 }
 
 .moimain {
-    padding: 5%
+    padding-left: 5%;
+    padding-right: 20%;
+    padding-top: 5%;
+    text-align: justify
 }
 
 .gallery {
