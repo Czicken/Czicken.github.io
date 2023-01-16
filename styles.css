@@ -53,8 +53,7 @@ html {
     flex-direction: column;
     align-items: center;
     gap: 10px;
-
-    overflow: auto;
+    overflow-x:hidden;
     width: 100%;
     text-align: center;
     padding-top: 6%;
@@ -62,22 +61,6 @@ html {
     min-height: 100vh;
     background-color: white
 }
-
-.sidebarhidden {
-    grid-area: sidebar;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-
-    overflow: auto;
-    width: 100%;
-    text-align: center;
-    padding-top: 6%;
-    font-size: 24px;
-    min-height: 100vh;
-    background-color: white
-}
-
 
 .title {
     /* this is for the title on the navbar if u wanna fuck around with that */
@@ -109,8 +92,7 @@ a {
     font-size: 20px;
     padding-top: 2%;
     padding-bottom: 2%;
-    padding-left: 100%;
-    padding-right: 100%;
+    padding-inline: 100%;
 }
 
 .namebutton {
@@ -138,6 +120,10 @@ hr {
     justify-content: center;
 
     padding: 10px;
+}
+
+.moimain {
+    padding: 5%
 }
 
 .gallery {
