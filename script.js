@@ -12,3 +12,16 @@ window.addEventListener('load', () => {
   const age = document.getElementById("age");
   age.innerHTML = ageInYears
 });
+
+
+function sidebarshow() {
+  let sssidebar = document.getElementById("ssidebar")
+  console.log (sssidebar.style.opacity)
+  if (sssidebar.style.opacity == "1") {
+    sssidebar.style.opacity = "0";
+  } else {
+    sssidebar.style.opacity = "1";
+  }
+
+  
+}
