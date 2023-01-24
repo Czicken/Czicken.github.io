@@ -7,10 +7,22 @@ function dateToAge(date) {
   return age;
 }
 
+
+function yearsSinceYear(year) {
+  const currentYear = new Date().getFullYear();
+  const diff = currentYear - year;
+  return diff;
+}
+
+
 window.addEventListener('load', () => {
   const ageInYears = dateToAge("2005-06-17");
   const age = document.getElementById("age");
   age.innerHTML = ageInYears
+  
+  const yearsSince = yearsSinceYear(2017);
+  const years = document.getElementById('preferedYears');
+  years.innerHTML = yearsSince
 });
 
 
