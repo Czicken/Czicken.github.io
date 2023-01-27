@@ -166,7 +166,6 @@ hr {
 }
 
 .galleryItem {
-    width: 480px;
     height: 480px;
 
     display: flex;
@@ -220,4 +219,19 @@ hr {
 .maingallery .galleryItem>img:hover{
     transform: scale(1.1);
 
+}
+
+.modal{
+    display:none;
+    position:relative;
+    justify-content: center;
+    width:100%;
+    height:100%;
+    overflow:auto;
+}
+
+.modal-content{
+    margin: auto;
+    display: block;
+    width: 90%
 }
