@@ -147,6 +147,10 @@ hr {
     text-align: justify
 }
 
+.link:hover {
+    color:#f3fcf9
+}
+
 .gallery {
     display: flex;
     flex-wrap: wrap;
