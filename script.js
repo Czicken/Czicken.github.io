@@ -28,5 +28,5 @@ window.addEventListener('load', () => {
 
 function sidebarshow() {
   let sssidebar = document.getElementById("ssidebar")
-  sssidebar.style.width = sssidebar.style.width === "20vh" ? "0" : "20vh";
+  sssidebar.style.width = sssidebar.style.width === "20vw" ? "0" : "20vw";
 };
