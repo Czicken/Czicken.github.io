@@ -28,12 +28,5 @@ window.addEventListener('load', () => {
 
 function sidebarshow() {
   let sssidebar = document.getElementById("ssidebar")
-  console.log (sssidebar.style.opacity)
-  if (sssidebar.style.opacity == "1") {
-    sssidebar.style.opacity = "0";
-  } else {
-    sssidebar.style.opacity = "1";
-  }
-
-  
-}
+  sssidebar.style.width = sssidebar.style.width === "20vh" ? "0" : "20vh";
+};
