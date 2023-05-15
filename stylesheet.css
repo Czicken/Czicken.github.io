@@ -1,0 +1,82 @@
+body,
+html {
+    background-color: #fbb6b6;
+    flex-wrap: wrap;
+    overflow: hidden;
+    margin: 0;
+}
+
+.logo {
+    max-height: 60vh;
+    width: 100vw;
+    object-fit: cover;
+    background-image: url("https://preview.redd.it/0w3fxkcmiut71.png?auto=webp&s=2e6afea379e8f2cafbeeab570a403b6892e95136");
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: grid;
+    grid-template-columns: 40vw auto 30vw;
+    grid-template-rows: 1fr 1fr;
+    Position: relative;
+}
+
+.name {
+    grid-column: 1 / 2;
+    grid-row: 1 / 3;
+}
+
+.particles, .czick {
+    grid-column: 3 / 4;
+    grid-row: 1 / 3;
+}
+
+
+.particles {
+    z-index: 10;
+}
+
+.name, .particles, .czick {
+    width: 100%;
+    height: auto;
+}
+
+.czick {
+    width: 75%;
+}
+
+
+
+.buttons{
+    max-height: 35vh;
+    width: 100vw;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    Position: relative;
+}
+
+.gallerybutton {
+    grid-column: 2;
+}
+
+.mebutton {
+    grid-column: 3;
+}
+
+
+.gallerybutton img, .mebutton img{
+    width: 30vw;
+    height: 30vh;
+    object-fit: contain;
+}
+
+.abutton{
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    bottom: 0;
+    width:100vw;
+    margin-bottom:1vw;
+    font-size:150%
+}
