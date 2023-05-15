@@ -8,6 +8,7 @@ html {
 
 .logo {
     max-height: 60vh;
+    min-height:35vh;
     width: 100vw;
     object-fit: cover;
     background-image: url("https://preview.redd.it/0w3fxkcmiut71.png?auto=webp&s=2e6afea379e8f2cafbeeab570a403b6892e95136");
@@ -15,7 +16,7 @@ html {
     background-repeat: no-repeat;
 
     display: grid;
-    grid-template-columns: 40vw auto 30vw;
+    grid-template-columns: 40vw auto 40vw;
     grid-template-rows: 1fr 1fr;
     Position: relative;
 }
@@ -28,6 +29,11 @@ html {
 .particles, .czick {
     grid-column: 3 / 4;
     grid-row: 1 / 3;
+    min-height: 35vh;
+    min-width: 40vw;
+    height:auto;
+    width:auto;
+    object-fit: scale-down;
 }
 
 
@@ -36,39 +42,33 @@ html {
 }
 
 .name, .particles, .czick {
-    width: 100%;
-    height: auto;
-}
-
-.czick {
-    width: 75%;
+    max-height: 60vh;
+    max-width: 40vw;
 }
 
 
 
 .buttons{
-    max-height: 35vh;
-    width: 100vw;
+    width: 100%;
 
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr;
-    Position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    justify-content: space-around;
+    margin-top:20px;
 }
-
-.gallerybutton {
-    grid-column: 2;
-}
-
-.mebutton {
-    grid-column: 3;
-}
-
 
 .gallerybutton img, .mebutton img{
-    width: 30vw;
-    height: 30vh;
-    object-fit: contain;
+    height: 250px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 0;
+    margin: 0;
+
+    overflow: hidden;
 }
 
 .abutton{
@@ -77,6 +77,6 @@ html {
     position: fixed;
     bottom: 0;
     width:100vw;
-    margin-bottom:1vw;
+    margin-bottom:1px;
     font-size:150%
 }
